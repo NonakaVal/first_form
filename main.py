@@ -11,10 +11,8 @@ class AplicacaoCliente:
         self.root = root
         self.root.title("Sistema de Gerenciamento")
 
-        # Crie um estilo temático
         style = ThemedStyle(self.root)
-
-        # Defina a cor da barra superior (substitua "blue" pela cor desejada)
+        
         style.configure("TFrame", background="#RRGGBB")
 
         try:
@@ -98,12 +96,12 @@ class AplicacaoCliente:
                                       padding=(10, 5))
         tabela_frame.grid(row=0, column=1, padx=10, pady=10, rowspan=2, sticky="nsew")
 
-        # Criar a tabela de clientes
+       
         colunas_cliente = ("Nome", "E-mail", "Telefone", "Endereço")
         self.tabela_cliente = ttk.Treeview(tabela_frame, columns=colunas_cliente, show="headings",
                                            style="Treeview.Heading")
 
-        # Configurar as colunas
+  
         for coluna in colunas_cliente:
             self.tabela_cliente.heading(coluna, text=coluna)
             self.tabela_cliente.column(coluna, width=150)
